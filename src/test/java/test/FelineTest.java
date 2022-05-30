@@ -33,7 +33,7 @@ public class FelineTest {
             };
         }
 
-        //параметризированный тест (3 набора входных данных)
+        //параметризированный тест
         @Test
         public void getKittensArgumentTest (){
             Feline feline = new Feline();

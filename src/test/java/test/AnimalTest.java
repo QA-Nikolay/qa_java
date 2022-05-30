@@ -1,7 +1,7 @@
 package test;
+
 import com.example.Animal;
 import org.junit.Test;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class AnimalTest {
 
     @Test
-    public void getFood1Test() throws Exception {
+    public void getFoodFirstTest() throws Exception {
         Animal animal = new Animal();
         List<String> actual = animal.getFood("Травоядное");
         List<String> expected = List.of("Трава", "Различные растения");
@@ -20,7 +20,7 @@ public class AnimalTest {
     }
 
     @Test
-    public void getFood2Test() throws Exception {
+    public void getFoodSecondTest() throws Exception {
         Animal animal = new Animal();
         List<String> actual = animal.getFood("Хищник");
         List<String> expected = List.of("Животные", "Птицы", "Рыба");

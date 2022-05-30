@@ -29,7 +29,7 @@ public class LionTest {
         public static Object[][] lionSexData() {
             return new Object[][] {
                     {"Самец", true},
-                    {"Самка", false}
+                    {"Самка", false},
             };
         }
 
@@ -58,7 +58,7 @@ public class LionTest {
     @Test
     public void lionExceptionTest() {
         try {
-            new Lion("любое животное");
+            new Lion("животное");
         } catch (Exception actual) {
             String expected = "Используйте допустимые значения пола животного - самец или самка";
             assertEquals(expected, actual.getMessage());
@@ -95,5 +95,17 @@ public class LionTest {
         assertEquals(expected, lion.getFood());
     }
 
+    //тесты на мептод doesHaveMane без параметризации
+    @Test
+    public void lionDoesHaveMainTrueTest () throws Exception {
+        Lion lion = new Lion("Самец");
+        assertTrue(lion.doesHaveMane());
+    }
+
+    @Test
+    public void lionDoesHaveMainFalseTest () throws Exception {
+        Lion lion = new Lion("Самка");
+        assertFalse(lion.doesHaveMane());
+    }
 
 }
